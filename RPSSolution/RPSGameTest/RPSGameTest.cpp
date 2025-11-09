@@ -21,5 +21,8 @@ namespace RPSGameTest
 		TEST_METHOD(Player2_Wins_PaperBeatsRock) {
 			Assert::AreEqual("Player2", rps_winner("Rock", "Paper"));
 		}
+		TEST_METHOD(Player1_Wins_ScissorsBeatsPaper) {
+			Assert::AreEqual("Player1", rps_winner("Scissors", "Paper"));
+		}
 	};
 }
