@@ -30,6 +30,13 @@ namespace RPSGameTest
 		TEST_METHOD(Player2_Wins_PaperBeatsRock) {
 			Assert::AreEqual("Player2", rps_winner("Rock", "Paper"));
 		}
+		TEST_METHOD(Invalid_WhenUnknownWord) {
+			Assert::AreEqual("Invalid", rps_winner("Lizard", "123"));
+		}
+
+		TEST_METHOD(Invalid_WhenLowercaseWord) {
+			Assert::AreEqual("Invalid", rps_winner("rock", "Rock"));
+		}
 
 	};
 }
