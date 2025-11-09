@@ -15,6 +15,7 @@ namespace RPSGameTest
 			Assert::AreEqual("Draw", rps_winner("Rock", "Rock"));
 			
 		}
+		// All Player 1 Wininning Conditions
 		TEST_METHOD(Player1_Wins_RockBeatsScissors) {
 			Assert::AreEqual("Player1", rps_winner("Rock", "Scissors"));
 		}
@@ -24,12 +25,14 @@ namespace RPSGameTest
 		TEST_METHOD(Player1_Wins_PaperBeatsRock) {
 			Assert::AreEqual("Player1", rps_winner("Paper", "Rock"));
 		}
+		//Player 2 Winning Conditions for Maximum Coverage
 		TEST_METHOD(Player2_Wins_RockBeatsScissors) {
 			Assert::AreEqual("Player2", rps_winner("Scissors", "Rock"));
 		}
 		TEST_METHOD(Player2_Wins_PaperBeatsRock) {
 			Assert::AreEqual("Player2", rps_winner("Rock", "Paper"));
 		}
+		// Invalid Inputs and Case Sensitivity
 		TEST_METHOD(Invalid_WhenUnknownWord) {
 			Assert::AreEqual("Invalid", rps_winner("Lizard", "123"));
 		}
