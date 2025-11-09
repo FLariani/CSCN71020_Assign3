@@ -6,6 +6,8 @@ const char* rps_winner(const char* p1, const char* p2) {
     (void)p1; (void)p2;
     if (strcmp(p1, p2) == 0)
         return "Draw";
+    if (strcmp(p1, "Rock") == 0 && strcmp(p2, "Scissors") == 0)
+        return "Player1";
 } 
 
 
