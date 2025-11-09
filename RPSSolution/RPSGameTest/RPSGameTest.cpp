@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
+extern "C" const char* rps_winner(const char* p1, const char* p2);
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -9,8 +10,10 @@ namespace RPSGameTest
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
-		{
+		TEST_METHOD(Draw_WhenBothRock)
+		{ // Same valid move on both sides = Draw
+			Assert::AreEqual("Draw", rps_winner("Rock", "Rock"));
+			
 		}
 	};
 }
